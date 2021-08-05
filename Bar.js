@@ -62,7 +62,7 @@
 							  };
 							const ctx = document.querySelector(".sapCustomWidgetWebComponent").shadowRoot.querySelector("#chart_div");
 																
-							var chart = new google.visualization.Gauge(ctx);
+							var chart = new google.visualization.BarChart(ctx);
 							chart.draw(data, options);
 							};                                                            
 				}
