@@ -39,18 +39,18 @@
 					});
 					function drawChart(props) {   
 						var dataportion=props.split(";");
-						var chartdata =[['City', '2010 Population',]];
+						var chartdata =[['Attribute', 'Measure',]];
 						for (let i=0;i<dataportion.length;i++){
 							var a =dataportion[i].split(",");
 							var Attr=a[0];
-							var Meas=a[1];
+							var Meas=Number(a[1]);
 							var rec=[Attr,Meas];
 							chartdata.push(rec);
 						}                                             
 						var data = google.visualization.arrayToDataTable(chartdata);
 			
 							var options = {
-								title: '',
+								title: 'Title',
 								chartArea: {width: '50%'},
 								hAxis: {
 								  title: 'Measure',
