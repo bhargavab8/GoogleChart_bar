@@ -1,0 +1,61 @@
+{
+    "id": "com.sap.sample.barchart",
+    "version": "1.0.0",
+    "name": "Barchart",
+    "description": "Bar chart",
+    "newInstancePrefix": "Barchart",
+    "icon": "https://bhargavab8.github.io/GoogleChart_bar/bar-chart.png",
+    "vendor": "SAP",
+    "eula": "",
+    "license": "",
+    "webcomponents": [
+        {
+            "kind": "main",
+            "tag": "com-sample-barchart",
+            "url": "https://bhargavab8.github.io/GoogleChart_bar/Bar.js",
+            "integrity": "",
+            "ignoreIntegrity": true
+        }
+       
+    ],
+    "properties": {
+            "width": {
+            "type": "integer",
+            "default": 500
+        },
+        "height": {
+            "type": "integer",
+            "default": 500
+        },
+        "value": {
+            "type": "string",
+            "description": "The new value"
+        }
+    },
+    "methods": {
+        "setvalue": {
+            "description": "Sets the value.",
+            "parameters": [
+                {
+                    "name": "newvalue",
+                    "type": "string",
+                    "description": "The new value"
+                }
+            ],
+            "body": "this.value = newvalue;"
+        },
+        "getvalue":{
+            "returnType": "string",
+            "description": "Returns the Chart Data",
+            "body": "return this.value;"
+            
+        } 
+        
+    },
+    "events": {
+        "onClick": {
+            "description": "Called when the user clicks the chart."
+        }
+    }
+}
+ 
